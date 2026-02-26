@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  worker1:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      - WORKER_ID=1
+  worker2:
+    build: .
+    ports:
+      - "8002:8000"
+    environment:
+      - WORKER_ID=2
+  worker3:
+    build: .
+    ports:
+      - "8003:8000"
+    environment:
+      - WORKER_ID=3
